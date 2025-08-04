@@ -1,35 +1,68 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Zubair Mahmud - Developer Portfolio" />
-  <title>Zubair Mahmud | Portfolio</title>
-  <link href="style.css" rel="stylesheet" />
-</head>
-<body>
-  <header class="hero">
-    <img src="https://i.postimg.cc/BQRYnbmC/Picsart-25-01-30-18-52-00-003.jpg" alt="Profile" class="profile-img" />
-    <h1>Hello, I'm <span class="typing">Zubair Mahmud</span></h1>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zubair Mahmud – Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <!-- Scroll to top -->
+    <button onclick="scrollToTop()" class="scroll-top">↑</button>
 
-  <section class="about">About Section</section>
-  <section class="skills">Skills Section</section>
-  <section class="projects">Projects Section</section>
-  <section class="experience">Experience Section</section>
-  <section class="contact">
-    <h2>Contact Me</h2>
-    <ul>
-      <li><a href="https://wa.me/8801888655432?text=Hi%20Zubair">WhatsApp</a></li>
-      <li><a href="https://www.linkedin.com/in/zubairmahmud">LinkedIn</a></li>
-      <li><a href="https://facebook.com/XubairMahmud">Facebook</a></li>
-      <li><a href="https://x.com/me_ZubairMahmud">X</a></li>
-      <li><a href="https://www.instagram.com/me.zubairmahmud">Instagram</a></li>
-      <li>Email: me.zubairmahmud@gmail.com</li>
-    </ul>
-  </section>
+    <!-- Hero Section -->
+    <section class="hero">
+      <img src="assets/profile.jpg" alt="Zubair Mahmud" class="profile-pic" />
+      <h1><span id="typing"></span></h1>
+      <p>I'm a passionate Software Engineer & Content Creator</p>
+    </section>
 
-  <script src="script.js"></script>
-</body>
+    <!-- About Section -->
+    <section class="about" id="about">
+      <h2>About Me</h2>
+      <p>
+        Full-stack developer with experience in React, Node.js, Tailwind, and UI/UX design. Founder of ZUNUR.
+      </p>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills" id="skills">
+      <h2>Skills</h2>
+      <div class="skill-grid">
+        <div class="skill-card">HTML</div>
+        <div class="skill-card">CSS</div>
+        <div class="skill-card">JavaScript</div>
+        <div class="skill-card">React</div>
+        <div class="skill-card">Node.js</div>
+        <div class="skill-card">Tailwind CSS</div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects" id="projects">
+      <h2>Projects</h2>
+      <div class="project-card">ZUNUR Fashion Site</div>
+      <div class="project-card">Portfolio Website</div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+      <h2>Contact</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <div class="contact-links">
+        <a href="https://wa.me/8801888655432" target="_blank">WhatsApp</a>
+        <a href="mailto:me.zubairmahmud@gmail.com">Email</a>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 Zubair Mahmud</p>
+    </footer>
+  </body>
 </html>
