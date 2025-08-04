@@ -1,15 +1,21 @@
-
-document.addEventListener("DOMContentLoaded", () => {
-  const text = "a Software Developer.";
-  const el = document.querySelector(".typing");
-  let i = 0;
-  function type() {
-    if (i < text.length) {
-      el.textContent += text.charAt(i);
-      i++;
-      setTimeout(type, 100);
-    }
+// Typing Animation
+const texts = ["Zubair Mahmud", "Full-stack Developer", "Content Creator"];
+let count = 0, index = 0, currentText = '', letter = '';
+(function type() {
+  if (count === texts.length) count = 0;
+  currentText = texts[count];
+  letter = currentText.slice(0, ++index);
+  document.getElementById('typing').textContent = letter;
+  if (letter.length === currentText.length) {
+    count++;
+    index = 0;
+    setTimeout(type, 1500);
+  } else {
+    setTimeout(type, 100);
   }
-  el.textContent = "";
-  type();
-});
+})();
+
+// Scroll to top
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
